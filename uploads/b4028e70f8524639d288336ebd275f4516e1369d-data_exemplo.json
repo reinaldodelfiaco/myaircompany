@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5c80457cb8c53500026ef9c0"},"first_name": "Admin" ,"last_name": "Teste" ,"email": "admin@qlove.com","password": "123456","address": "local 1","admin": true,"active": true}
