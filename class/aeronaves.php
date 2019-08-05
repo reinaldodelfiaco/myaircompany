@@ -26,7 +26,7 @@ class aeronaves {
     {
         if(is_post()) 
         {
-            $this->val->name('numero')->value(post('numero'))->required();
+
             if($this->val->isSuccess())
             {
                 $this->db->update("aeronaves",copy_post(), ['id'=> get('id')]);
