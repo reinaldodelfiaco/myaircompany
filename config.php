@@ -1,8 +1,8 @@
 <?php
     
     date_default_timezone_set('America/Sao_Paulo');
-    define('BASE', 'http://localhost/voeava/');
-    define('HTDOCS', '/voeava');
+    define('BASE', 'http://localhost/myaircompany/');
+    define('HTDOCS', '/myaircompany');
     define('PUBLIC_URL', BASE . '/public/');
     define('PUBLIC_UPLOAD', BASE . '/uploads/');
     define('PAGE_LOGOUT', 'chefias/index');

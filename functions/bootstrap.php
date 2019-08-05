@@ -2,20 +2,31 @@
 
 function ptable($title)
 {
-    echo '<div class="card pd-20 pd-sm-40">
-            <h6 class="card-body-title">' . $title . '</h6>';
+    echo '<div class="portlet portlet-boxed portlet-table">
+    <div class="portlet-header">
+    <h4 class="portlet-title">
+    <u>' . $title . '</u>
+    </h4>
+    </div>
+    <div class="portlet-body">';
 
 }
 
 function opanel($title)
 {
-    echo '<div class="card pd-20 pd-sm-40">
-            <h6 class="card-body-title">' . $title . '</h6>';
+    echo '<div class="portlet portlet-boxed">
+    <div class="portlet-header">
+    <h4 class="portlet-title">
+    ' . $title . '
+    </h4>
+    </div> 
+    <div class="portlet-body" style="padding: 15px;">';
 }
 
 function cpanel()
 {
-    echo '</div>';
+    echo '</div> 
+    </div>';
 }
 
 function div($class = null, $id = null)
@@ -504,16 +515,14 @@ function modal_link($name, $modal, $class = "btn btn-primary")
 
 function omodal($title, $id, $c = null)
 {
-    echo '<div id="' . $id . '" class="modal fade">
-        <div class="modal-dialog ' . $c . '" role="documento">
-        <div class="modal-content tx-size-sm">
-        <div class="modal-header pd-x-20">
-        <h6 class="tx-14 mg-b-0 tx-uppercase tx-inverse tx-bold">' . $title . '</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+    echo '<div id="' . $id . '" class="modal modal-styled">
+        <div class="modal-dialog ' . $c . '">
+        <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">' . $title . '</h3>
         </div> 
-        <div class="modal-body pd-20">';
+        <div class="modal-body">';
 }
 
 
@@ -526,18 +535,24 @@ function cmodal()
         </div>';
 }
 
-function dashboard_count($name, $value, $ico, $link = null, $color = null)
+function dashboard_count($name, $value, $ico, $link, $color = null)
 {   
 
     $color = ($color) ? 'style="color: '.$color.'"' : '';
-    echo '  <div class="card mg-b-20">
-                <div class="card-body pd-b-0">
-                <h6 class="card-body-title tx-12 tx-spacing-2 mg-b-20 tx-success">'  . $name . '</h6>
-                <h2 class="tx-lato text-center '.$color.'">' . $value . '</h2>
-                </div><!-- card-body -->
-                <div id="rs1" class="ht-50 ht-sm-70 mg-r--1"></div>
-            </div>';
-   
+
+
+    echo '
+        <a href="'.BASE.$link.'">
+        <div class="icon-stat">
+        <div class="row">
+        <div class="col-xs-12 text-left">
+        <span class="icon-stat-label text-center">'  . $name . '</span> 
+        <span class="icon-stat-value text-center" '.$color.' >' . $value . '</span> 
+        </div>
+        </div>
+        </div>
+        </a>
+        ';
 }
 
 function dashboard_count_nota($name, $value, $ico, $id, $link, $color = null)
@@ -1221,4 +1236,3 @@ function notam_table($options) {
         
         </script>';
 }
-
