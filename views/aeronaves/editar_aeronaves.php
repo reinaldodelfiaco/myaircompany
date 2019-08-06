@@ -33,11 +33,7 @@ opanel('Editar');
         ];
             form_select2_data('Tipo do Gerenciamento:', 'tipo_gerenciamento',  $gerencia,  $aeronaves->tipo_gerenciamento);
         cdiv();
-<<<<<<< HEAD
-        col(3);
-=======
-        col(2)
->>>>>>> b99c406d6564c0e923c7b4ab696d4e93007b5bda
+        col(2);
         $categoria = [
         ['nome' => 'AAD', 'value' => 'ADD'],
         ['nome' => 'ADE', 'value' => 'ADE'],
@@ -64,7 +60,7 @@ opanel('Editar');
         col(2);
         form_text_input('Mátricula:', 'matricula', 'required','','', $aeronaves->matricula);
         cdiv();
-    cvid();
+    cdiv();
 
     row();
         col(3);
