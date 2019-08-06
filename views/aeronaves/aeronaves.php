@@ -8,30 +8,7 @@
     
     omodal('Adicionar aeronaves', 'add', 'modal-lg');
     form_open('aeronaves/aeronaves');
-?>
 
-<ul id="myTab1" class="nav nav-tabs">
-    <li class="active">
-        <a  href="#rab" id="irab" data-toggle="tab">RAB</a>
-    </li>
-    <li class="">
-        <a  href="#fan" id="ifan" data-toggle="tab">Informações Complementares</a>
-    </li>
-
-    <li class="">
-        <a href="#man" id="iman" data-toggle="tab">Manutenção</a>
-    </li>
-
-    <li class="">
-        <a  href="#param" id="iparam" data-toggle="tab">Parâmetros de Voo</a>
-    </li>
-</ul>
-<div id="myTab1Content" class="tab-content">
-
-
-<div class="tab-pane fade active in" id="rab">
-<?php
-    
     row();
         col(3);
             $gerencia = [
@@ -120,14 +97,6 @@
             form_int_input('Assentos totais:', 'assentos','');
         cdiv();
     cdiv();
-cdiv();
-    
-?>
-</div>
-
-<div class="tab-pane fade active in" id="fan">
-<?php
-    
     row();
        col(4);
         $esteira = [
@@ -218,13 +187,8 @@ cdiv();
             form_text_input('Cor Abrigo:','abrigo_cor', '');
         cdiv();
     cdiv();
-            
-?>
-</div>
 
 
-<div class="tab-pane fade in" id="man">
-<?php
     row();
         col(4);
             form_text_input('Extintor (validade):', 'extintor', '');
@@ -267,11 +231,6 @@ cdiv();
             form_text_input('Extras:', 'extras', '');
         cdiv();        
     cdiv();
-?>
-</div>
-    
-<div class="tab-pane fade in" id="param">
-<?php
     row();
         col(4);
             form_text_input('Crew (mínimo):', 'trip_min', '');
@@ -322,12 +281,7 @@ cdiv();
             form_text_input('Autonomia Máxima:', 'autonomia_max', '');
         cdiv();
     cdiv();
-    ?>
-    </div>
- </div>
 
-    <?php
-          
     submit('Salvar', 'btn btn-success');
     form_close();
     cmodal();

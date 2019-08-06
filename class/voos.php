@@ -93,6 +93,8 @@ class voos {
                 $id = $this->db->insert("voos",$fields);
                 $this->db->update("voos", ['lugares_disponiveis' => post('lugares'), ['id' => $id]]);
 
+
+
                 if ($id) {
                     flash("success", "voos adicionado com sucesso.");
                 } else {

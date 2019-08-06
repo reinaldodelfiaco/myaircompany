@@ -33,7 +33,12 @@ opanel('Editar');
         ];
             form_select2_data('Tipo do Gerenciamento:', 'tipo_gerenciamento',  $gerencia,  $aeronaves->tipo_gerenciamento);
         cdiv();
+<<<<<<< HEAD
         col(2);
+=======
+        col(3);
+
+>>>>>>> e6ac1f514f3bdb5f3422b39157db774c496e50c7
         $categoria = [
         ['nome' => 'AAD', 'value' => 'ADD'],
         ['nome' => 'ADE', 'value' => 'ADE'],
